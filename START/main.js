@@ -7,3 +7,5 @@ const data = [
     { day: 'Friday', temp: 57},
     { day: 'Saturday', temp: 61}
 ]
+
+const margin
