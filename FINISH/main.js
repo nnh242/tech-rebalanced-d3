@@ -9,10 +9,10 @@ const data = [
 ];
 
 const margin = { top: 5, right: 5, bottom: 50, left: 50};
-const height = 960;
-const width = 500;
+const height = 500;
+const width = 960;
 
-d3.select("body").append("svg").attr('height', 960).attr('width', 500);
+d3.select("body").append("svg").attr('height', 960).attr('width', width);
 const svg = d3.select('svg');
 
 let x = d3.scaleBand().rangeRound([0, width]).padding(0.1);
@@ -45,6 +45,6 @@ x.domain(data.map(function(d) { return d.day; }));
     .enter().append("rect")
       .attr("class", "bar")
       .attr("x", function(d) { return x(d.day); })
-      .attr("y", function(d) { return y(d.)temp; })
+      .attr("y", function(d) { return y(d.temp); })
       .attr("width", x.bandwidth())
       .attr("height", function(d) { return height - y(d.temp); });
